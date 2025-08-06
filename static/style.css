@@ -1,0 +1,148 @@
+  body {
+    font-family: Arial, sans-serif;
+    background: #eef2f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  h1 {
+    margin-bottom: 10px;
+  }
+  .river-container {
+    position: relative;
+    width: 700px;
+    height: 300px;
+    border: 2px solid #3273dc;
+    background: linear-gradient(to right, #88ccee 50%, #557799 50%);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: visible;
+    background-image: url(./images/river.jpg);
+     background-size: cover;      /* or contain */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .bank {
+    position: absolute;
+    top: 170px;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    /* border: 2px solid black; */
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+  .left-bank {
+    left: 1px;
+  }
+  .right-bank {
+    right: 1px;
+  }
+
+ 
+  .characters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    min-height: 250px;
+  }
+
+  .character {
+    width: 35px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+  }
+  .character:hover {
+    border-color: #ddd;
+  }
+
+  
+
+  .boat {
+    position: absolute;
+    bottom: 10px;
+    width: 180px;
+    height: 60px;
+    /* background: #6b4f4f; */
+    border-radius: 15px 15px 5px 5px;
+    /* border: 2px solid #4a3636; */
+    transition: left 1.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-image: url('./images/boat.png');
+    background-size: cover;      /* or contain */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .boat.left {
+    left: 20px;
+  }
+
+  .boat.right {
+    left: 500px;
+  }
+
+  .boat-characters {
+    display: flex;
+    gap: 10px;
+  }
+
+  .bank-counts {
+    color: white;
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-weight: bold;
+  }
+
+  #boatSideText {
+    margin-left: 20px; 
+    font-weight: bold;
+  }
+
+  #message {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    min-height: 1.2em;
+    color: #c12e2e;
+  }
+
+  /* table */
+
+   .tableFixHead {
+        overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+        height: 200px; /* gives an initial height of 200px to the table */
+      }
+      .tableFixHead thead th {
+        position: sticky; /* make the table heads sticky */
+        top: 0px; /* table head will be placed from the top of the table and sticks to it */
+      }
+      table {
+        border-collapse: collapse; /* make the table borders collapse to each other */
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+      }
+      th {
+        background: #eee;
+      }
