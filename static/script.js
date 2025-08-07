@@ -212,8 +212,8 @@ function checkGameOver() {
   if (goodLeft === 3 && badLeft === 3) {
     clearInterval(timerInterval);
     messageDiv.style.color = 'green';
-    messageDiv.textContent = '🎉 You WON!';
-    const playerName = prompt("🎉 You won! Enter your name:");
+    messageDiv.textContent = 'You WON!';
+    const playerName = prompt("You won! Enter your name:");
 
     if (playerName) {
       fetch('/gameover', {
@@ -232,7 +232,7 @@ function checkGameOver() {
     return true;
   }
 
-  // 🟥 Loss condition on left bank
+  // Loss condition on left bank
   if (goodLeft > 0 && badLeft > goodLeft) {
     clearInterval(timerInterval);
     messageDiv.style.color = '#c12e2e';
@@ -256,7 +256,7 @@ function checkGameOver() {
     return true;
   }
 
-  // 🟥 Loss condition on right bank
+  // Loss condition on right bank
   if (goodRight > 0 && badRight > goodRight) {
     clearInterval(timerInterval);
     messageDiv.style.color = '#c12e2e';

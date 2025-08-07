@@ -31,11 +31,8 @@ def gameover():
         game_result = GameResult(name=name, result=result, time=time)
         db.session.add(game_result)
         db.session.commit()
-        print(f"Saved result: {name}, {result}, {time}s")
-        return jsonify({'message': 'Result saved'}), 200
-    else:
-        print(" Missing data:", data)
-        return jsonify({'error': 'Incomplete data'}), 400
+        
+
 
 
 @app.route('/leaderboard')
